@@ -1,8 +1,8 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { create, completed, edit, erase, marckTODO, clean } from './todo.actions';
+import { create, completed, edit, erase, markTODO, clean } from './todo.actions';
 import TODO from '../../models/todo.model';
 
-export const initialState: TODO[] = [new TODO('Aprender UX'), new TODO('Terminar Angular'), new TODO('Aprender GO')];
+export const initialState: TODO[] = [];
 
 const _todoReducer = createReducer(
     initialState,
@@ -23,7 +23,7 @@ const _todoReducer = createReducer(
         });
     }),
 
-    on(marckTODO, (state, { status }) => {
+    on(markTODO, (state, { status }) => {
         return state.map(todo => {
             return {
                 ...todo,

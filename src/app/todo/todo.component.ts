@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../redux/app.state';
-import { marckTODO } from '../redux/todo/todo.actions';
+import { markTODO } from '../redux/todo/todo.actions';
 
 @Component({
   selector: 'todo',
@@ -16,7 +16,7 @@ export class TodoComponent {
 
   marckAll() {
     this.completed = !this.completed;
-    this.store.dispatch(marckTODO({ status: this.completed }));
+    this.store.dispatch(markTODO({ status: this.completed }));
   }
 
 }

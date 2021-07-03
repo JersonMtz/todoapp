@@ -20,8 +20,8 @@ export const erase = createAction(
     props<{ id: number }>()
 );
 
-export const marckTODO = createAction(
-    '[TODO] Marck all the TODOS',
+export const markTODO = createAction(
+    '[TODO] Mark all the TODOS',
     props<{ status: boolean }>()
 );
 
