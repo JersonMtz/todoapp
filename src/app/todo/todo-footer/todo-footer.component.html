@@ -1,0 +1,20 @@
+<footer class="footer">
+    <span class="todo-count">
+        <strong>
+            {{ count }}
+        </strong>
+        Pendientes
+    </span>
+    <ul class="filters">
+        <li *ngFor="let item of arrayFilter" (click)="applyFilter(item)">
+            <a 
+            href="#/"
+            [class.selected]="(item === 'Todos' && filterNow === 'all') || (item === 'Completados' && filterNow === 'completed') || (item === 'Incompletos' && filterNow === 'incompleted')">
+                {{ item }}
+            </a>
+        </li>
+    </ul>
+    <button class="clear-completed" (click)="cleanTODOS()">
+        Limpiar
+    </button>
+</footer>

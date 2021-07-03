@@ -1,0 +1,4 @@
+<ul class="todo-list">
+    <todo-item *ngFor="let item of listTODO | todoFilter: filterNow"
+                [todo]="item"></todo-item>
+</ul>
